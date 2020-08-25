@@ -23,7 +23,7 @@
         <p class="status busy">You have {{ pending.length }} pending item<span v-if="pending.length>1">s</span></p>
         <transition-group name="todo-item" tag="ul" class="todo-list">
           <li v-for="(item, index) in pending" v-bind:key="item.title">
-            <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
+            <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="radio">
             <label v-bind:for="'item_' + item.id"></label>
             <span class="todo-text">{{ item.title }}</span>
             <span class="delete" @click="deleteItem(item)"></span>
