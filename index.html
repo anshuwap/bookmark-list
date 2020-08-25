@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Todo list - Vue.js</title>    
+  <title>Bookmark list - Vue.js</title>    
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" href="images/favicon.png" sizes="32x32">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,100,700,100italic,300italic,400italic">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39432248-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-39432248-2');
-  </script>
-
 </head>
 
 <body>
   <div id="app">
-    <h1>Daily To-Do list manager</h1>
+    <h1>Bookmark list manager</h1>
     <section class="todo-wrapper">
       <h2 class="todo-title">{{ today.day }}<br>{{ today.date }}</h2>
       <form @keydown.enter.prevent="">
@@ -43,7 +32,7 @@
       </div> 
 
       <transition name="slide-fade">
-        <p class="status free" v-if="!pending.length" ><img src="images/beer_celebration.svg" alt="celebration">Time to chill!  You have no todos.</p> 
+        <p class="status free" v-if="!pending.length" ><img src="images/beer_celebration.svg" alt="celebration">Time to chill!  You have no list.</p> 
       </transition> 
 
       <div v-if="completed.length > 0 && showComplete">
@@ -65,11 +54,9 @@
   </div>
   <footer>
     <div class="github-links">
-      <a class="github-button" href="https://github.com/nourabusoud" aria-label="Follow @nourabusoud on GitHub">Follow @nourabusoud</a>
-      <a class="github-button" href="https://github.com/nourabusoud/vue-todo-list" data-icon="octicon-star" aria-label="Star nourabusoud/vue-todo-list on GitHub">Star</a>
-    </div>  
-    Made with <3 by <a href="https://www.nourabusoud.com/">Nour Soud</a><br>
-    View on <a href="https://github.com/nourabusoud/vue-todo-list">Github</a> or play around with it on <a href="https://codepen.io/nourabusoud/pen/WMGZaL">Codepen</a>
+      <a class="github-button" href="https://github.com/anshuwap" aria-label="Follow @anshuwap on GitHub">Follow @anshuwap</a>
+      <a class="github-button" href="https://github.com/anshuwap/bookmark-list" data-icon="octicon-star" aria-label="Star anshuwap/bookmark-list on GitHub">Star</a>
+    </div>
   </footer>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
